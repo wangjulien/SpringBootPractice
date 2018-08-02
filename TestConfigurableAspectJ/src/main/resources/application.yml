@@ -1,0 +1,11 @@
+#server:
+#  servlet:
+#    context-path: /app 
+
+spring:
+  main:
+    banner-mode: "off"
+
+#logging:
+#  level: 
+#    org.springframework: debug
