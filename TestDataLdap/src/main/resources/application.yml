@@ -19,8 +19,14 @@ spring:
         enabled: true
         
 management:
+  server:
+    port: 8081
   endpoints:
+    jmx:
+      domain: com.telino.myapp
+      unique-names: true
     web:
+      base-path: /manage
       exposure:
         include: "*"
   endpoint:
@@ -29,3 +35,15 @@ management:
   info:
     git:
       mode: full
+  metrics:
+    web:
+      server:
+        auto-time-requests: true
+      
+info:
+  app:
+    encoding: "@project.build.sourceEncoding@"
+    java:
+      source: "@java.version@"
+      target: "@java.version@"
+  
