@@ -1,4 +1,4 @@
-package come.telino.tries.react;
+package com.obbo.boot.react;
 
 import java.time.Duration;
 
