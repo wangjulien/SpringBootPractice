@@ -1,4 +1,4 @@
-package com.obbo.cloud.oauth2;
+package com.obbo.oauth2.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TestSecurityOauth2ApplicationTests {
+public class TestSecurityOauth2ServerApplicationTests {
 
 	@Test
 	public void contextLoads() {
