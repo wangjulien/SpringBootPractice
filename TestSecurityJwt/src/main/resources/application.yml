@@ -1,0 +1,14 @@
+spring:
+  datasource: 
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 
+    
+app:
+  jwt:
+    authorities-key: scopes
+    signing-key: sercret_jwt
+    access-token-validity-seconds: 18000
+    header-string: Authorization
+    token-prefix: Bearer
+    
