@@ -1,63 +1,52 @@
-dn: dc=springframework,dc=org
+dn: dc=telino,dc=com
 objectclass: top
 objectclass: domain
 objectclass: extensibleObject
-dc: springframework
+dc: telino
 
 # Organizational Units
-dn: ou=groups,dc=springframework,dc=org
+dn: ou=profile,dc=telino,dc=com
 objectclass: top
 objectclass: organizationalUnit
-ou: groups
+ou: profile
 
-dn: ou=people,dc=springframework,dc=org
+dn: ou=people,dc=telino,dc=com
 objectclass: top
 objectclass: organizationalUnit
 ou: people
 
 # Create People
-dn: uid=john,ou=people,dc=springframework,dc=org
+dn: uid=admin,ou=people,dc=telino,dc=com
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-cn: John Doe
-sn: John
-uid: john
-password: secret
+cn: Admin ADMIN
+sn: admin
+uid: admin
+password: test
 
-dn: uid=jihn,ou=people,dc=springframework,dc=org
+dn: uid=guest,ou=people,dc=telino,dc=com
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-cn: Jihn Die
-sn: Jihn
-uid: jihn
-password: secret
-
-dn: uid=jahn,ou=people,dc=springframework,dc=org
-objectclass: top
-objectclass: person
-objectclass: organizationalPerson
-objectclass: inetOrgPerson
-cn: Jahn Dae
-sn: Jahn
-uid: jahn
-password: secret
+cn: Guest GUEST
+sn: guest
+uid: guest
+password: test
 
 # Create Groups
-dn: cn=developers,ou=groups,dc=springframework,dc=org
+dn: cn=administrators,ou=profile,dc=telino,dc=com
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: developers
-ou: developer
-uniqueMember: uid=john,ou=people,dc=springframework,dc=org
-uniqueMember: uid=jihn,ou=people,dc=springframework,dc=org
+cn: administrators
+ou: administrator
+uniqueMember: uid=admin,ou=people,dc=telino,dc=com
 
-dn: cn=managers,ou=groups,dc=springframework,dc=org
+dn: cn=users,ou=profile,dc=telino,dc=com
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: managers
-ou: manager
-uniqueMember: uid=jahn,ou=people,dc=springframework,dc=org
+cn: users
+ou: user
+uniqueMember: uid=guest,ou=people,dc=telino,dc=com

@@ -5,18 +5,18 @@ spring:
     # username: uid=admin
     # password: secret
    embedded:
-      base-dn: dc=springframework,dc=org
+      base-dn: dc=telino,dc=com
       credential:
         username: uid=admin
-        password: secret
+        password: test
       ldif: classpath:schema.ldif
       port: 12345
       validation:
         enabled: false
-  data:
-    ldap:
-      repositories:
-        enabled: true
+#  data:
+#    ldap:
+#      repositories:
+#        enabled: true
         
 management:
   server:

@@ -55,9 +55,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration corsConf = new CorsConfiguration();
 
-		corsConf.setAllowedOrigins(Arrays.asList("moz-extension://3f709ba5-b7d3-46c2-b978-e91cac54b07a"));
+//		corsConf.setAllowedOrigins(Arrays.asList("moz-extension://3f709ba5-b7d3-46c2-b978-e91cac54b07a"));
 		// Dev Option
-//		 corsConf.addAllowedOrigin("*");
+		corsConf.addAllowedOrigin("*");
 
 		corsConf.setAllowedMethods(Arrays.asList("*"));
 

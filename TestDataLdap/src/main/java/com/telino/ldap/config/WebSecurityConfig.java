@@ -24,9 +24,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.ldapAuthentication()
 				.userDnPatterns("uid={0},ou=people")
-				.groupSearchBase("ou=groups")
+				.groupSearchBase("ou=profile")
 				.contextSource()
-					.url("ldap://localhost:12345/dc=springframework,dc=org")
+					.url("ldap://localhost:12345/dc=telino,dc=com")
 				.and()
 				.passwordCompare()
 //					.passwordEncoder(passwordEncoder())
