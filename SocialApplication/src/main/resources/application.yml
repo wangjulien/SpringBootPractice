@@ -1,3 +1,11 @@
+security:
+  oauth2:
+    client:
+      client-id: telino
+      client-secret: Telino_2018
+      scope: read,write
+      auto-approve-scopes: '.*'
+
 facebook:
   client:
     clientId: 238509156807639
@@ -9,7 +17,17 @@ facebook:
     clientAuthenticationScheme: form
   resource:
     userInfoUri: https://graph.facebook.com/me
-    
+
+github:
+  client:
+    clientId: c7e8fcc8565a9fea9ba7
+    clientSecret: 60072bd101b251d1f30f4468349d095e2d22a179
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+
 logging:
   level:
     org.springframework.security: DEBUG

@@ -8,7 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-	@RequestMapping("/user")
+//	@RequestMapping({ "/user", "/me" })
+//	public Map<String, String> user(Principal principal) {
+//		Map<String, String> map = new LinkedHashMap<>();
+//		map.put("name", principal.getName());
+//		return map;
+//	}
+	
+	@RequestMapping({"/user", "/me"})
 	public Principal user(Principal principal) {
 		return principal;
 	}
